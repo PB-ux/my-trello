@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary2;
+  padding: 15px;
+  &__btn {
+    border: none;
+    border-radius: 3px;
+    background-color: $header-btn-color;
+    color: $header-color;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $header-btn-hover-color;
+    }
+  }
+}

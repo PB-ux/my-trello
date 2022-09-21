@@ -1,0 +1,147 @@
+.main {
+  flex-grow: 1;
+  padding: 50px 20px;
+  background-color: $primary1;
+  .board {
+    display: flex;
+    .column {
+      align-self: start;
+      background-color: $column-color;
+      width: $column-width;
+      border: 1px dotted #ccc;
+      border-radius: 5px;
+      margin-right: 20px;
+      padding: 5px;
+    }
+    .placeholder-column {
+      background-color: $placeholder-column-color;
+      border-radius: 5px;
+      width: $column-width;
+      border: none;
+      margin-right: 20px;
+      padding: 5px;
+    }
+    &-column-header {
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-weight: bold;
+      cursor: move;
+      &:focus {
+        outline: 2px solid $column-header-outline-color;
+        border-radius: 2px;
+      }
+    }
+    &-item {
+      height: $ticket-height;
+      width: $ticket-width;
+      background-color: $ticket-color;
+      box-shadow: 0px 2px 0px rgb(0 0 0 / 20%);
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 0.5em;
+      padding: 6px;
+      transition: background-color 0.3s;
+      &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        .uil-trash-alt {
+          padding: 6px;
+          border-radius: 3px;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: $ticket-btn-trash-hover;
+          }
+        }
+      }
+      &:hover {
+        background-color: $ticket-hover-color;
+      }
+    }
+    .placeholder {
+      border-radius: 5px;
+      background-color: $placeholder-ticket-color;
+      margin-bottom: 0.5em;
+      width: $ticket-width;
+      height: $ticket-height;
+    }
+    .emptySectionHiddenLesson {
+      box-shadow: none;
+      background: none;
+      border: none;
+      width: $ticket-width;
+      height: $ticket-height;
+    }
+    &-form {
+      display: none;
+      &__textarea {
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        border-radius: 3px;
+        border: none;
+        padding: 7px;
+        height: 70px;
+        resize: none;
+        outline: none;
+        margin-bottom: 8px;
+      }
+      &__buttons {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+      }
+      &__btn-add {
+        font-family: "Roboto", sans-serif;
+        background-color: $form-btn-add-color;
+        border: none;
+        border-radius: 3px;
+        padding: 8px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-right: 8px;
+        &:hover {
+          background-color: $form-btn-add-hover-color;
+        }
+      }
+      &__btn-cancel {
+        cursor: pointer;
+        .uil-times {
+          font-size: 30px;
+          color: #adadad;
+          transition: color 0.3s;
+          &:hover {
+            color: $form-btn-cancel-hover-color;
+          }
+        }
+      }
+    }
+    &__btn {
+      font-family: "Roboto", sans-serif;
+      width: 100%;
+      background-color: $column-color;
+      border: none;
+      border-radius: 3px;
+      color: column-btn-color;
+      padding: 7px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+      .uil-plus {
+        margin-right: 6px;
+      }
+      &:hover {
+        background-color: $column-btn-hover-color;
+      }
+    }
+  }
+}

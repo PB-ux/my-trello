@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./src/styles/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>MyTrello</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="#" class="logo__link">MyTrello</a>
+      </div>
+      <button class="header__btn">Добавить колонку</button>
+    </header>
+
+    <main class="main">
+      <div class="board">
+        <div class="column">
+          <div class="board-column-header" draggable contenteditable="true">
+            Введите название
+          </div>
+          <div class="board-column-content-wrapper">
+            <div class="board-item item1" draggable>
+              <div class="board-item-content">
+                Стартовая карточка <i class="uil uil-trash-alt"></i>
+              </div>
+            </div>
+
+            <div class="board-form">
+              <textarea
+                class="board-form__textarea"
+                placeholder="Введите название карточки"
+              ></textarea>
+              <div class="board-form__buttons">
+                <button class="board-form__btn-add">Добавить карточку</button>
+                <a class="board-form__btn-cancel"
+                  ><i class="uil uil-times"></i
+                ></a>
+              </div>
+            </div>
+
+            <button class="board__btn">
+              <i class="uil uil-plus"></i>Добавить карточку
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="logo">
+        <a href="#" class="logo__link">MyTrello</a>
+      </div>
+    </footer>
+    <script src="./src/scripts/dnd.js"></script>
+    <script src="./src/scripts/dnd-columns.js"></script>
+    <script src="./src/scripts/dnd-tickets.js"></script>
+  </body>
+</html>
